@@ -251,7 +251,7 @@ vec2 fragCoord = fragment(floor(std::getRenderTargetSize() * std::getVertexTexCo
 // In a non-fullscreen shader you can do:
 
 using namespace std;
-void main(out Position, out Color){
+void main(out vec4 Position, out vec4 Color){
     Position = getModelViewProjectionMatrix() * getVertexPosition();
 
     vec2 fragCoord = fragment(Position.xy / Position.w);
